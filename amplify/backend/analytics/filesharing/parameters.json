@@ -1,0 +1,21 @@
+{
+    "appName": "filesharing",
+    "roleName": "pinpointLambdaRole6fa2dda2",
+    "cloudformationPolicyName": "cloudformationPolicy6fa2dda2",
+    "cloudWatchPolicyName": "cloudWatchPolicy6fa2dda2",
+    "pinpointPolicyName": "pinpointPolicy6fa2dda2",
+    "authPolicyName": "pinpoint_amplify_6fa2dda2",
+    "unauthPolicyName": "pinpoint_amplify_6fa2dda2",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

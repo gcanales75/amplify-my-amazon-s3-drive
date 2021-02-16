@@ -1,0 +1,16 @@
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type Object @model(subscriptions: null)
+@key(name: "byUser", fields: ["username", "key_object"], queryField: "listObjectByUser")
+{
+  username: ID!
+  key_object: String
+}
+
+type Subscription {
+  onCreateObject(username: ID): Object @aws_subscribe(mutations: ["createObject"])
+  onDeleteObject(username: ID): Object @aws_subscribe(mutations: ["deleteObject"])
+}

@@ -330,7 +330,7 @@ class ManageFiles extends React.Component {
                         this.upload.value = null;
                         this.upload.click();
                       }}
-                      loading={this.state.uploading}
+                      disabled={this.state.isUploading}
                       variant="contained" color="primary" fullWidth
                     >
                       Select file
